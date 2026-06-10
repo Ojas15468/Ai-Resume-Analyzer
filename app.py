@@ -61,7 +61,7 @@ elif st.session_state.page == 'home':
         # Results dikhao — session state se
         data = st.session_state.analysis_data
         st.success("✅ Analysis Complete!")
-        st.metric("Overall Score", f"{data['overall_score']}/10")
+        st.metric("Overall Score", f"{data['overall_score']}")
         
         st.subheader("Issues Found")
         table_data = [{"Problem": i['problem'], "Solution": i['solution']} for i in data['issues']]

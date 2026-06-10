@@ -1,5 +1,5 @@
 ## 🌐 Live Demo
-[Try it here!]((https://ai-resume-anaalyze.streamlit.app/))
+[Try it here!](https://ai-resume-anaalyze.streamlit.app/)
 
 # AI Resume Analyzer 🤖
 

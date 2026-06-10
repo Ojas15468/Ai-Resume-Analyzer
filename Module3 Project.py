@@ -7,7 +7,9 @@ client=Groq(api_key=os.getenv("GROQ_API_KEY"))
 import fitz
 
 # PDF se text nikalo
-doc = fitz.open(r"C:\Users\Naman\OneDrive\Desktop\LLM\MODULE 3\resume.pdf")
+base_dir = os.path.dirname(os.path.abspath(__file__))
+pdf_path = os.path.join(base_dir, "resume.pdf")
+doc = fitz.open(pdf_path)
 text = ""
 for page in doc:
     text += page.get_text()
@@ -45,7 +47,7 @@ content = content.replace("```json", "").replace("```", "").strip()
 data = json.loads(content)
 from tabulate import tabulate
 
-# Table banane ke liye data chahiye — list of lists
+
 table_data = []
 for issue in data['issues']:
     table_data.append([issue['problem'], issue['solution']])

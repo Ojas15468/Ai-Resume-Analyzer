@@ -54,7 +54,7 @@ for issue in data['issues']:
 
 
 
-print(f"Score: {data['overall_score']}/10")
+print(f"Score: {data['overall_score']}")
 print(f"\nIssues found: {len(data['issues'])}")
 print(tabulate(table_data, headers=["Problem", "Solution"], tablefmt="grid"))
 
